@@ -1,6 +1,8 @@
-let price = 1.1 + 1.3;
+let amount = -20;
 
-showMessage(price);
-// 2.4000000000000000004  (Don't know why there's a 4 on the end yet)
+showMessage(amount);    // 22
+
+let otherAmount = 0;
+showMessage(--otherAmount);    // -1
 
 console.log("This aggression will not stand, man.");
