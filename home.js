@@ -1,21 +1,6 @@
-let welcome = 'Welcome to Jackass!'
+let price = 1.1 + 1.3;
 
-let price = 12,
-    taxRate = 0.07;
-
-//price -= 5;
-showMessage(++price);
-
-// Others: price++; += ; -= ; *= ; /= ; %=
-
-/*
-let price = 49.99,
-    name = 'Hiking boots',
-    discounted = false;
-
-showMessage("Ch-ch-ch-changes...");
-showMessage(welcome);
-showMessage(discounted);
-*/
+showMessage(price);
+// 2.4000000000000000004  (Don't know why there's a 4 on the end yet)
 
 console.log("This aggression will not stand, man.");
