@@ -1,12 +1,14 @@
 let welcome = 'Welcome to Jackass!'
 
-/*
-let name = 'Hiking boots';
-let price = 49.99;
-let discounted = false;
-*/
+let price = 12,
+    taxRate = 0.07;
 
-// Declaring variables in a group. Is this JS' version of defining a class?
+//price -= 5;
+showMessage(++price);
+
+// Others: price++; += ; -= ; *= ; /= ; %=
+
+/*
 let price = 49.99,
     name = 'Hiking boots',
     discounted = false;
@@ -14,5 +16,6 @@ let price = 49.99,
 showMessage("Ch-ch-ch-changes...");
 showMessage(welcome);
 showMessage(discounted);
+*/
 
 console.log("This aggression will not stand, man.");
