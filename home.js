@@ -1,12 +1,16 @@
 // PluralSight JS 6: Program Flow
-// Block Scope Using let
+// Looping with for()
 
-if (true) {
-    let value = 'yes';
-    showMessage(value);
+for (let i = 0; i < 3; i++) {
+    console.log(i);
 }
+// 0 1 2
+// Set i at 0. i will iterate thru 0,1,2. Increment i by 1 on each pass. Print i to console log on each pass.
 
-console.log(value);  // Uncaught ReferenceError: value is not defined
-
-// If using 'var [variableName], it can appear outside the code block.
-// This is not best practice.
+/*
+for (let i = 0; i < 3; i--) {
+    console.log(i);
+}
+// This leads to an infinite loop. Console continues to print -i numbers endlessly.
+// Shut down the server and browser to stop the cycle.
+*/
