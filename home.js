@@ -1,42 +1,26 @@
-/*
-//let message = 'Hello world!';
-//let message = 'Hello \"world\"!';
+// PluralSight JS 6: Program Flow
+// Conditionals Using if():
 
-let name = 'Andrea';
-let message = `Hello, 
+if (5 === 5) {
+    console.log('Yes');
+}
 
+if (5 > 10) {
+    console.log('No');
+}
 
-${name}`;
+if (5 >= 5) {
+    console.log('Yes');
+}
 
-//message = message.substring(1);        //ello, andrea
-//showMessage(message.toLowerCase());    //hello, andrea
-//showMessage(message.toUpperCase());    //HELLO, ANDREA
-showMessage(message.length);   //16
-*/
-/* 
-let amount = 123;
- amount = amount.toString();
- showMessage(typeof amount);    //string
- */
-/*
- let amount = Number.parseFloat('123.12A');
- showMessage(typeof amount);    //123.12
- */
-/*
-let saved = false;
-showMessage(typeof saved);      //boolean
-*/
-/*
-let saved = true;
-saved = !saved;     // "saved2 equals NOT saved2"
-showMessage(saved);    //false
-*/
-//let saved;
-let saved = 10;
-saved = null;   //use 'null' to wipe out variable's value
+let state = 'FL';
+let taxPercent = 0;
 
-showMessage(saved);
-console.log(saved);   //undefined
+if (state === 'FL') {
+    taxPercent = 7;
+}
 
-console.log(message);
-console.log("This aggression will not stand, man."); 
+if (state != 'FL') {
+    taxPercent = 0;
+}
+console.log(taxPercent);   // 7
