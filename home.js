@@ -1,17 +1,19 @@
 // PluralSight JS 6: Program Flow
-// if()...else
+// Comparing === and ==
 
-let state = 'FL';
-let taxPercent;    // note the empty variable here
-
-if (state === 'FL') {
-    taxPercent = 7;    // declares the variable ONLY when if() is met
-}
-else if (state === 'NY') {
-    taxPercent = 8.875;
+/*
+if (1 === '1') {
+    showMessage('true');
 }
 else {
-    taxPercent = 0;
+    showMessage('false');   // returns 'false' because int 1 != string '1'
 }
+*/
 
-console.log(taxPercent);    // 7
+// **When using '==', JS attempts to convert types--thus, int 1 == string '1'
+if (1 == '1') {
+    showMessage('true');
+}
+else {
+    showMessage('false');
+}
