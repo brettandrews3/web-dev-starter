@@ -1,21 +1,12 @@
 // PluralSight JS 6: Program Flow
-// The ternary operator
+// Block Scope Using let
 
-// Ternary works with 3 different values
-// and is shortcut for if-else statements
+if (true) {
+    let value = 'yes';
+    showMessage(value);
+}
 
-// It is: (condition) ? true-statement : false-statement;
+console.log(value);  // Uncaught ReferenceError: value is not defined
 
-/*
-price = 20;
-let message = (price > 10) ? 'expensive' : 'cheap';
-showMessage(message);
-*/
-/*
-let price = 20;
-(price < 10) ? showMessage('yes') : showMessage('no');
-*/
-let price = 20;
-
-let message = (price < 10) ? 'yes' :'no';
-showMessage(message);
+// If using 'var [variableName], it can appear outside the code block.
+// This is not best practice.
