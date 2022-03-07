@@ -26,13 +26,17 @@ let amount = 123;
 let saved = false;
 showMessage(typeof saved);      //boolean
 */
+/*
 let saved = true;
 saved = !saved;     // "saved2 equals NOT saved2"
 showMessage(saved);    //false
-
+*/
+//let saved;
+let saved = 10;
+saved = null;   //use 'null' to wipe out variable's value
 
 showMessage(saved);
-
+console.log(saved);   //undefined
 
 console.log(message);
 console.log("This aggression will not stand, man."); 
