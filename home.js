@@ -22,6 +22,17 @@ let amount = 123;
  let amount = Number.parseFloat('123.12A');
  showMessage(typeof amount);    //123.12
  */
+/*
+let saved = false;
+showMessage(typeof saved);      //boolean
+*/
+let saved = true;
+saved = !saved;     // "saved2 equals NOT saved2"
+showMessage(saved);    //false
+
+
+showMessage(saved);
+
 
 console.log(message);
 console.log("This aggression will not stand, man."); 
