@@ -1,19 +1,17 @@
 // PluralSight JS 6: Program Flow
-//Truthy and falsy
-/*
-// JS doesn't understand floating decimals like this...
-if (1.1 + 1.3 !== 2.4) {
-    showMessage('true');
+// if()...else
+
+let state = 'FL';
+let taxPercent;    // note the empty variable here
+
+if (state === 'FL') {
+    taxPercent = 7;    // declares the variable ONLY when if() is met
 }
-*/
-/*
-// ...so fix this by putting the floats in () to make an object:
-if ( (1.1 + 1.3).toFixed(2) !== 2.4) {
-    showMessage('true');
+else if (state === 'NY') {
+    taxPercent = 8.875;
 }
-*/
-// This returns a string. Add '+' before the float object to convert:
-if ( +(1.1 + 1.3).toFixed(2) !== 2.4) {
-    showMessage('true');
+else {
+    taxPercent = 0;
 }
-// Convert to a fixed decimal place for proper literal comparisons.
+
+console.log(taxPercent);    // 7
