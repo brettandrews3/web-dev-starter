@@ -1,19 +1,21 @@
 // PluralSight JS 6: Program Flow
-// Comparing === and ==
+// The ternary operator
+
+// Ternary works with 3 different values
+// and is shortcut for if-else statements
+
+// It is: (condition) ? true-statement : false-statement;
 
 /*
-if (1 === '1') {
-    showMessage('true');
-}
-else {
-    showMessage('false');   // returns 'false' because int 1 != string '1'
-}
+price = 20;
+let message = (price > 10) ? 'expensive' : 'cheap';
+showMessage(message);
 */
+/*
+let price = 20;
+(price < 10) ? showMessage('yes') : showMessage('no');
+*/
+let price = 20;
 
-// **When using '==', JS attempts to convert types--thus, int 1 == string '1'
-if (1 == '1') {
-    showMessage('true');
-}
-else {
-    showMessage('false');
-}
+let message = (price < 10) ? 'yes' :'no';
+showMessage(message);
