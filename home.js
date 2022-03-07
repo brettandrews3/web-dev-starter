@@ -1,8 +1,16 @@
-let amount = -20;
+//let message = 'Hello world!';
+//let message = 'Hello \"world\"!';
 
-showMessage(amount);    // 22
+let name = 'Andrea';
+let message = `Hello, 
 
-let otherAmount = 0;
-showMessage(--otherAmount);    // -1
 
+${name}`;
+
+//message = message.substring(1);        //ello, andrea
+//showMessage(message.toLowerCase());    //hello, andrea
+//showMessage(message.toUpperCase());    //HELLO, ANDREA
+showMessage(message.length);   //16
+
+console.log(message);
 console.log("This aggression will not stand, man.");
