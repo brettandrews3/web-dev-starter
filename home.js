@@ -1,3 +1,4 @@
+/*
 //let message = 'Hello world!';
 //let message = 'Hello \"world\"!';
 
@@ -11,6 +12,16 @@ ${name}`;
 //showMessage(message.toLowerCase());    //hello, andrea
 //showMessage(message.toUpperCase());    //HELLO, ANDREA
 showMessage(message.length);   //16
+*/
+/* 
+let amount = 123;
+ amount = amount.toString();
+ showMessage(typeof amount);    //string
+ */
+/*
+ let amount = Number.parseFloat('123.12A');
+ showMessage(typeof amount);    //123.12
+ */
 
 console.log(message);
-console.log("This aggression will not stand, man.");
+console.log("This aggression will not stand, man."); 
