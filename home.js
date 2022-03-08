@@ -1,8 +1,12 @@
 // PluralSight JS 7: Functions
-// Function Basics
+// Function Expressions
 
-function logMessage () {
-    console.log('Here is a message');
+function showMessage() {
+    
 }
 
-logMessage();
+let myFunction = function () {
+    console.log('Hey! This is a private residence, man!');
+}
+
+myFunction();    // calls the function
