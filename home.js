@@ -1,10 +1,8 @@
-// PluralSight JS 6: Functions
+// PluralSight JS 7: Functions
 // Function Basics
 
-function showMessage() {
-    console.log('in a function');
+function logMessage () {
+    console.log('Here is a message');
 }
 
-// Call the function to execute the block of code:
-showMessage();
-showMessage();     // 'in a function' prints to console
+logMessage();
