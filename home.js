@@ -1,23 +1,10 @@
-// PluralSight JS 6: Program Flow
-// Summary notes
+// PluralSight JS 6: Functions
+// Function Basics
 
-/*
-Review if...else statements
+function showMessage() {
+    console.log('in a function');
+}
 
-Truthy and falsy expressions:
-- '0' is true, but 0 is false
-- EVERY number is true, except 0
-
-Comparing === to ==
-- Always use === and !== as a best practice
-- JavaScript might try to convert types if you use == and !=
-
-The ternary operator
-- (condition) ? (true-statement) : (false-statement);
-
-Block Scope
-- Variables declared with let|const are block scoped and can't appear outside of it
-
-Loops: for, while, do ... while()
-- Be sure that the loops can complete at some point. Else, browser and server get in infinite loop
-*/
+// Call the function to execute the block of code:
+showMessage();
+showMessage();     // 'in a function' prints to console
