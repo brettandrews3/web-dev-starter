@@ -1,31 +1,27 @@
 // PluralSight JS 8: Objects and the DOM
-// Passing Objects to Functions
+// Standard Built-in Objects
 
 /*
-// We define message as a global variable, but we only changed it within the function:
-let message = 'Hello';
+Info used in this lesson comes from Mozilla Developer Network
 
-function changeMessage(message) {
-    message = 'Do you speak English, sir? Parle usted ingles?'
-    // This variable declaration only changed the parameter, NOT the original variable
-}
-// changeMessage applied the variable above the function.
-changeMessage(message);
-
-showMessage(message);
+- The resource includes details about arrays: groups of objects | vaLues
+- Date(): includes methods like .getDate(), .getFullYear, .getUTCDate(), etc
+    - Instantiate this object by calling 'new Date();'
+    - A useful function: Date.toDateString() converts numerical dates to strings
 */
 
-// 2nd example:
-let person = {
-    name: 'Jeffrey Lebowski',
-    age: 67,
-    partTime: false,
-    cleftAsshole: true
-};
+/*
+// Get the current date and store it in a variable:
+let now = new Date();
+showMessage( now.toDateString() );    // Wed Mar 09 2022
+*/
 
-function incrementAge(person) {
-    person.age++;
-}
+/*
+// Testing Math values and methods from MDN:
+showMessage( Math.abs(-42) );    // 42
+showMessage( Math.random() );    // 0.7119836274701075
+*/
 
-incrementAge( person );
-showMessage(person.age);   //68
+let s = 'I like your style, Dude.';
+showMessage( s.charAt(5) );     // e
+showMessage( Number.MIN_SAFE_INTEGER );    //-9007199254740991
