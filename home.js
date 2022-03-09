@@ -1,15 +1,31 @@
 // PluralSight JS 8: Objects and the DOM
-// Object Methods
+// Passing Objects to Functions
 
-// Using our object from the last commit, we're adding a method to it:
+/*
+// We define message as a global variable, but we only changed it within the function:
+let message = 'Hello';
 
+function changeMessage(message) {
+    message = 'Do you speak English, sir? Parle usted ingles?'
+    // This variable declaration only changed the parameter, NOT the original variable
+}
+// changeMessage applied the variable above the function.
+changeMessage(message);
+
+showMessage(message);
+*/
+
+// 2nd example:
 let person = {
-    name: 'John',
-    age: 42,
+    name: 'Jeffrey Lebowski',
+    age: 67,
     partTime: false,
-    showInfo: function(realAge) {
-        showMessage(this.name + ' is ' + realAge);
-    }
+    cleftAsshole: true
 };
 
-person.showInfo(34);    // 'John is 34' in showMessage
+function incrementAge(person) {
+    person.age++;
+}
+
+incrementAge( person );
+showMessage(person.age);   //68
