@@ -1,11 +1,16 @@
 // PluralSight JS 8: Objects and the DOM
-// Styling DOM Elements
+// Detecting Button Clicks
 
-// We're grabbing the 'GET A GRIP' element on index.html, around ln 60
-const header = document.getElementById('message');
+/*
+In this lesson, we're reviewing the SEE REVIEW button from the website 
+for Trail Review: Asphalt National Park. ~ln 124 on index.html
 
-// To change its color, we can use the color name or its hexcode:
-header.style.color = 'green';
-header.style.color = '#FFF';
+Remove the href tag from the line. Add id="see-review" to make it
+editable by JavaScript.
+*/
 
-header.style.fontWeight = '800';
+const button = document.getElementById('see-review');
+
+button.addEventListener('click', function() {
+    console.log('click');
+} );
