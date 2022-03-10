@@ -1,14 +1,10 @@
 // PluralSight JS 9: Arrays
-// Creating and Initializing Arrays
+// Accessing Array Items
 
-//let values = [ ] ;
+const values = [ 'a', 'b', 'c' ];
 
-// Each value in an array is an element. values has 3 elements.
-//let values = [ 1, 2 ,3 ] ;
-
-//let values = Array.of(1, 2, 3);
-
-const values = ['a', 'b', 'c'];
-console.log(Array.isArray(values));     // true
-
-// Find additional documentation at Mozilla Development Network
+values[0] = 'aaa';
+console.log( values[0] );    // aaa
+console.log( values[1] );    // b
+console.log( values[2] );    // c
+console.log( values[3] );    // undefined
