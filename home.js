@@ -1,48 +1,14 @@
-// PluralSight JS 8: Objects and the DOM
-// Showing and Hiding DOM Elements
+// PluralSight JS 9: Arrays
+// Creating and Initializing Arrays
 
-/*
-In this lesson, we're reviewing the SEE REVIEW button from the website 
-for Trail Review: Asphalt National Park. ~ln 124 on index.html
+//let values = [ ] ;
 
-Remove the href tag from the line. Add id="see-review" to make it
-editable by JavaScript.
-*/
-/*
-const button = document.getElementById('see-review');
+// Each value in an array is an element. values has 3 elements.
+//let values = [ 1, 2 ,3 ] ;
 
-button.addEventListener('click', function() {
-    console.log('click');
-} );
-*/
+//let values = Array.of(1, 2, 3);
 
-// Lesson 8.9 additions. See <div> in index.html, ~ln 130 for context.
+const values = ['a', 'b', 'c'];
+console.log(Array.isArray(values));     // true
 
-/*
-// Edits to button below will grab the element 'review', then remove the 
-// do-nothing 'd-none' class from the review element in index.html.
-const button = document.getElementById('see-review');
-
-button.addEventListener('click', function() {
-    const review = document.getElementById('review');
-
-    review.classList.remove('d-none');
-});
-*/
-
-// Toggle the review by clicking the button again. Add if statement to do this:
-const button = document.getElementById('see-review');
-
-button.addEventListener('click', function() {
-    const review = document.getElementById('review');
-
-    if (review.classList.contains('d-none')) {
-        review.classList.remove('d-none');
-        button.textContent = 'CLOSE REVIEW';
-    }
-    else {
-        review.classList.add('d-none');
-        button.textContent = 'SEE REVIEW';
-    }
-
-});
+// Find additional documentation at Mozilla Development Network
