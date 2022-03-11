@@ -1,46 +1,31 @@
 // PluralSight JS 9: Arrays
-// Manipulating Arrays
-
+// slice() and splice()
 /*
-// push() adds items to the end of an array:
-const values = [ 'a', 'b', 'c' ];
-values.push('d');
-
-console.log( values );          // a b c d
-*/
-
-/*
-// pop() removes the last item in an array
+// slice() grabs the values from an array at their index numbers:
 const values = [ 'a', 'b', 'c', 'd' ];
-const last = values.pop();
-console.log( last );     // d
+const newValues = values.slice(1, 2); // (where we start, ending element [not included])
+console.log( newValues );  // b
+console.log( values );     // a b c d [initial array is unaltered]  
+
+values.splice(1, 1);   // (index of element you want to delete, # of items to delete)
+console.log( values ); // a c d
+
+values.splice(1, 0, 'foo');  // (at index 1, remove 0 items,insert 'foo' into the values array)
+console.log( values );       // a foo c d
 */
 
 /*
-// shift() drops the first item in the array:
-const values = [ 'a', 'b', 'c', 'd' ];
-const first = values.shift();
-console.log( first );           // a
-console.log ( values );         // b c d
+const values = [ 'a', 'b', 'c', 'd', 'e' ];
+const newValues = values.slice(1, 4);  // start at index 1, delete to end. End item is exluded from slice()
+console.log( newValues );    // b c d
 */
 
-/*
-// unshift() adds a new first item to the array:
-const values = [ 'b', 'c', 'd' ];
-values.unshift('a');
-console.log( values );          // a b c d
-*/
+const values = [ 'a', 'b', 'c', 'd', 'e' ];
+values.splice(2, 1);     // remove 1 item, starting at index 2 [c]
+console.log( values );   // a b d e
 
-// Putting it all together:
-const values = [ 'a', 'b', 'c' ];
-values.push( 'd', 'e', 'f' );
-console.log( values );          // a b c d e f
+values.splice(2, 0, 'hello'); // at index 2, add 'hello' to array without deleting anything
+console.log( values );        // a b hello d e
 
-const last = values.pop();
-console.log( values, last );    // [a b c d e] f
-
-const first = values.shift();
-console.log( values, first );   // [b c d e] a
-
-values.unshift('hello', 'world');
-console.log( values );          // [hello world b c d e]
+values.splice(2, 1, 'Jerry'); // at index 2, delete hello and add Jerry
+console.log( values );        // a b Jerry d e
