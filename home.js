@@ -1,16 +1,18 @@
 // PluralSight JS 10: Scope and Hoisting
-// var and Hoisting
+// Undeclared Variables and Strict Mode
+
 /*
-// productId = 456;
+// You can declare a variable without var | let | const.
+// The variable gets assigned to window, which can get clogged
+// with too many global variables:
+productId = 1234;
 
-console.log(productId); // undefined (can't call variable before it's declared)
-
-var productId = 123;
+console.log(window.productId);     // 1234
 */
 
-// Hoisting: you can call a function before you define it
-showProductId();    // 123
+// Apply strict mode and force user to define variables clearly:
+'use strict';
 
-function showProductId() {
-    console.log(123);
-}
+productId = 1234;
+
+console.log(productId);     // Uncaught ReferenceError: productId is not defined
