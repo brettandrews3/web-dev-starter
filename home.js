@@ -1,29 +1,18 @@
 // PluralSight JS 9: Arrays
-// Array Searching and Looping
+// Arrays in the DOM
 
+// The website is composed of Bootstrap containers.
+// Let's grab all of them to store in an array:
+
+
+const containers = document.getElementsByClassName('container');
 /*
-// indexOf() lets us get the index of a certain value in the array:
-const values = [ 'a', 'b', 'c', 'd' ];
-console.log( values.indexOf('b') );     // 1
-console.log( values.indexOf('e') );     // -1 because 'e' isn't in the array
+console.log( containers );
+// returns "HTMLCollection(8)". Click the arrow to reveal the 8 containers
+// in order of appearance in the code.
 */
 
-// filter() sorts through array, makes new array based on your criteria:
-const values = [ 'a', 'b', 'c', 'd' ];
-const set = values.filter(function(item) {      // assigns 'item' to each value in array 'values'
-    return item > 'b';
-});
-console.log( set );   // c d
-
-// find() sorts through array and returns first item that matches its criteria:
-// It's common to use function() in JavaScript. In these cases, function(item) will
-// be called until it returns True.
-const newValues = [ 'a', 'bbb', 'c', 'Dude' ];
-const found = newValues.find(function(item) {
-    return item.length > 1;
-})
-console.log( found );  // bbb
-
-newValues.forEach(function(item) {
-    console.log(item.toUpperCase());
-});   //  A BBB C DUDE
+// Let's hide the container at index 2: the graphic with the boots.
+// We'll add the display-none class to that container in order to do so:
+containers[2].classList.add('d-none');
+console.log(containers);
