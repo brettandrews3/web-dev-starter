@@ -1,18 +1,27 @@
-// PluralSight JS 9: Arrays
-// Arrays in the DOM
+// PluralSight JS 10: Scope and Hoisting
+// Global Scope
 
-// The website is composed of Bootstrap containers.
-// Let's grab all of them to store in an array:
-
-
-const containers = document.getElementsByClassName('container');
 /*
-console.log( containers );
-// returns "HTMLCollection(8)". Click the arrow to reveal the 8 containers
-// in order of appearance in the code.
+let productId = 12345;
+
+function showProductId() {
+    console.log(productId);
+};
+showProductId();    // 12345
 */
 
-// Let's hide the container at index 2: the graphic with the boots.
-// We'll add the display-none class to that container in order to do so:
-containers[2].classList.add('d-none');
-console.log(containers);
+// To reduce global scope pollution, create 1 variable in the global
+// scope and make that a constant:
+
+const app = {
+    productId: 12345,
+    userName: 'King Roland of Druidia',
+    orderNumber: 67890
+};
+
+// Be sure to call the property from the global variable here (app.propertyName):
+function showProductId() {
+    console.log(app.productId);
+};
+
+showProductId();    // 12345
