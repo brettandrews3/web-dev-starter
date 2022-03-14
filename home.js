@@ -1,31 +1,29 @@
 // PluralSight JS 9: Arrays
-// slice() and splice()
+// Array Searching and Looping
+
 /*
-// slice() grabs the values from an array at their index numbers:
+// indexOf() lets us get the index of a certain value in the array:
 const values = [ 'a', 'b', 'c', 'd' ];
-const newValues = values.slice(1, 2); // (where we start, ending element [not included])
-console.log( newValues );  // b
-console.log( values );     // a b c d [initial array is unaltered]  
-
-values.splice(1, 1);   // (index of element you want to delete, # of items to delete)
-console.log( values ); // a c d
-
-values.splice(1, 0, 'foo');  // (at index 1, remove 0 items,insert 'foo' into the values array)
-console.log( values );       // a foo c d
+console.log( values.indexOf('b') );     // 1
+console.log( values.indexOf('e') );     // -1 because 'e' isn't in the array
 */
 
-/*
-const values = [ 'a', 'b', 'c', 'd', 'e' ];
-const newValues = values.slice(1, 4);  // start at index 1, delete to end. End item is exluded from slice()
-console.log( newValues );    // b c d
-*/
+// filter() sorts through array, makes new array based on your criteria:
+const values = [ 'a', 'b', 'c', 'd' ];
+const set = values.filter(function(item) {      // assigns 'item' to each value in array 'values'
+    return item > 'b';
+});
+console.log( set );   // c d
 
-const values = [ 'a', 'b', 'c', 'd', 'e' ];
-values.splice(2, 1);     // remove 1 item, starting at index 2 [c]
-console.log( values );   // a b d e
+// find() sorts through array and returns first item that matches its criteria:
+// It's common to use function() in JavaScript. In these cases, function(item) will
+// be called until it returns True.
+const newValues = [ 'a', 'bbb', 'c', 'Dude' ];
+const found = newValues.find(function(item) {
+    return item.length > 1;
+})
+console.log( found );  // bbb
 
-values.splice(2, 0, 'hello'); // at index 2, add 'hello' to array without deleting anything
-console.log( values );        // a b hello d e
-
-values.splice(2, 1, 'Jerry'); // at index 2, delete hello and add Jerry
-console.log( values );        // a b Jerry d e
+newValues.forEach(function(item) {
+    console.log(item.toUpperCase());
+});   //  A BBB C DUDE
