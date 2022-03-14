@@ -1,27 +1,26 @@
 // PluralSight JS 10: Scope and Hoisting
-// Global Scope
+// Function Scope
 
 /*
-let productId = 12345;
-
 function showProductId() {
+    let productId = 12345;
     console.log(productId);
 };
+
 showProductId();    // 12345
 */
 
-// To reduce global scope pollution, create 1 variable in the global
-// scope and make that a constant:
-
-const app = {
-    productId: 12345,
-    userName: 'King Roland of Druidia',
-    orderNumber: 67890
-};
-
-// Be sure to call the property from the global variable here (app.propertyName):
 function showProductId() {
-    console.log(app.productId);
-};
+    let productId = 12345;
 
-showProductId();    // 12345
+    function fix() {
+        let productId = 45678;
+        console.log('in fix: ', productId);
+    }
+
+    fix();  // the productId 45678 goes out of scope after this function runs
+
+    console.log('in showProductId: ', productId);
+}
+
+showProductId();    // in fix: 12345    in showProductId: 45678
