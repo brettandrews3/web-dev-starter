@@ -1,26 +1,16 @@
 // PluralSight JS 10: Scope and Hoisting
-// Function Scope
-
+// var and Hoisting
 /*
-function showProductId() {
-    let productId = 12345;
-    console.log(productId);
-};
+// productId = 456;
 
-showProductId();    // 12345
+console.log(productId); // undefined (can't call variable before it's declared)
+
+var productId = 123;
 */
 
+// Hoisting: you can call a function before you define it
+showProductId();    // 123
+
 function showProductId() {
-    let productId = 12345;
-
-    function fix() {
-        let productId = 45678;
-        console.log('in fix: ', productId);
-    }
-
-    fix();  // the productId 45678 goes out of scope after this function runs
-
-    console.log('in showProductId: ', productId);
+    console.log(123);
 }
-
-showProductId();    // in fix: 12345    in showProductId: 45678
